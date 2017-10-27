@@ -8,7 +8,17 @@
 
 import UIKit
 
+enum selectionComponent {
+
+    case title
+    
+    case selection
+    
+}
+
 class SelectionTableViewController: UITableViewController {
+    
+    let components: [selectionComponent] = [ .title, .selection ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +43,20 @@ class SelectionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        let component = components[section]
+        
+        switch component {
+        case .title:
+            
+            return 1
+            
+        case .selection:
+            
+            return 10
+        
+        }
+        
     }
 
     /*
