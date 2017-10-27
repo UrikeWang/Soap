@@ -16,12 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let entryViewController = makeEntryController()
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        
+        window.rootViewController = entryViewController
+        
+        window.makeKeyAndVisible()
+        
+        self.window = window
+        
         return true
     }
     
     func makeEntryController() -> UIViewController {
         
-        
+        return TabBarController(itemTypes: [.selection, .store, .material])
     
     }
 

@@ -18,6 +18,24 @@ enum TabBarItemType {
 // MARK: - Title
 extension TabBarItemType {
 
+    var title: String {
     
+        switch self {
+            
+        case .selection:
+            
+            return NSLocalizedString("Selection", comment: "")
+           
+        case .store:
+            
+            return NSLocalizedString("Store", comment: "")
+            
+        case .material:
+            
+            return NSLocalizedString("Material", comment: "")
+        
+        }
+        
+    }
     
 }
