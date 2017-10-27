@@ -23,11 +23,32 @@ class SelectionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupTableView()
+    }
+    
+    func setupTableView() {
+        
+        let titleNib = UINib(
+            nibName: "TitleTableViewCell",
+            bundle: nil
+        )
+        
+        tableView.register(
+            titleNib,
+            forCellReuseIdentifier: "TitleTableViewCell"
+        )
+    
+        let selectionNib = UINib(
+            nibName: "SelectionTableViewCell",
+            bundle: nil
+        )
+        
+        tableView.register(
+            selectionNib,
+            forCellReuseIdentifier: "SelectionTableViewCell"
+        )
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +59,8 @@ class SelectionTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return components.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,15 +80,53 @@ class SelectionTableViewController: UITableViewController {
         
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        let component = components[indexPath.section]
+        
+        switch component {
+            
+        case .title:
+            
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: "TitleTableViewCell",
+                for: indexPath
+            ) as! TitleTableViewCell
+            
+            return cell
+            
+        case .selection:
+            
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: "SelectionTableViewCell",
+                for: indexPath
+            ) as! SelectionTableViewCell
+            
+            return cell
+            
+        }
 
-        return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 44.0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let component = components[indexPath.section]
+        
+        switch component {
+            
+        case .title, .selection:
+            
+            return UITableViewAutomaticDimension
+        
+        }
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -18,6 +18,10 @@
 		6EFC96291FA31EB7001D5A08 /* StoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC96281FA31EB7001D5A08 /* StoreTableViewController.swift */; };
 		6EFC962C1FA31EED001D5A08 /* MaterialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC962B1FA31EED001D5A08 /* MaterialTableViewController.swift */; };
 		6EFC962F1FA32071001D5A08 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC962E1FA32071001D5A08 /* TabBarItem.swift */; };
+		6EFC96331FA32803001D5A08 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC96311FA32803001D5A08 /* TitleTableViewCell.swift */; };
+		6EFC96341FA32803001D5A08 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC96321FA32803001D5A08 /* TitleTableViewCell.xib */; };
+		6EFC963B1FA3285C001D5A08 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC96391FA3285C001D5A08 /* SelectionTableViewCell.swift */; };
+		6EFC963C1FA3285C001D5A08 /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC963A1FA3285C001D5A08 /* SelectionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		6EFC96281FA31EB7001D5A08 /* StoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreTableViewController.swift; path = Store/StoreTableViewController.swift; sourceTree = "<group>"; };
 		6EFC962B1FA31EED001D5A08 /* MaterialTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialTableViewController.swift; path = Material/MaterialTableViewController.swift; sourceTree = "<group>"; };
 		6EFC962E1FA32071001D5A08 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarItem.swift; path = TabBar/TabBarItem.swift; sourceTree = "<group>"; };
+		6EFC96311FA32803001D5A08 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleTableViewCell.swift; path = Selection/TitleTableViewCell.swift; sourceTree = "<group>"; };
+		6EFC96321FA32803001D5A08 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TitleTableViewCell.xib; path = Selection/TitleTableViewCell.xib; sourceTree = "<group>"; };
+		6EFC96391FA3285C001D5A08 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectionTableViewCell.swift; path = Selection/SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		6EFC963A1FA3285C001D5A08 /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectionTableViewCell.xib; path = Selection/SelectionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				6EFC96251FA31E71001D5A08 /* SelectionTableViewController.swift */,
+				6EFC96391FA3285C001D5A08 /* SelectionTableViewCell.swift */,
+				6EFC963A1FA3285C001D5A08 /* SelectionTableViewCell.xib */,
+				6EFC96311FA32803001D5A08 /* TitleTableViewCell.swift */,
+				6EFC96321FA32803001D5A08 /* TitleTableViewCell.xib */,
 			);
 			name = Selection;
 			sourceTree = "<group>";
@@ -174,6 +186,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EFC96341FA32803001D5A08 /* TitleTableViewCell.xib in Resources */,
+				6EFC963C1FA3285C001D5A08 /* SelectionTableViewCell.xib in Resources */,
 				6EFC96181FA31453001D5A08 /* LaunchScreen.storyboard in Resources */,
 				6EFC96151FA31453001D5A08 /* Assets.xcassets in Resources */,
 				6EFC96131FA31453001D5A08 /* Main.storyboard in Resources */,
@@ -194,6 +208,8 @@
 				6EFC96261FA31E71001D5A08 /* SelectionTableViewController.swift in Sources */,
 				6EFC96291FA31EB7001D5A08 /* StoreTableViewController.swift in Sources */,
 				6EFC962F1FA32071001D5A08 /* TabBarItem.swift in Sources */,
+				6EFC96331FA32803001D5A08 /* TitleTableViewCell.swift in Sources */,
+				6EFC963B1FA3285C001D5A08 /* SelectionTableViewCell.swift in Sources */,
 				6EFC962C1FA31EED001D5A08 /* MaterialTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
