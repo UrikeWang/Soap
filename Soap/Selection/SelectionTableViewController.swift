@@ -16,12 +16,23 @@ enum selectionComponent {
     
 }
 
+enum selectionDetailComponent {
+    
+    case material
+    
+    case feature
+}
+
 class SelectionTableViewController: UITableViewController {
     
     let components: [selectionComponent] = [ .title, .selection ]
+    
+    let detailComponents: [selectionDetailComponent] = [.material, .feature]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.separatorStyle = .none
 
         setupTableView()
     }
@@ -74,7 +85,7 @@ class SelectionTableViewController: UITableViewController {
             
         case .selection:
             
-            return 10
+            return detailComponents.count
         
         }
         
