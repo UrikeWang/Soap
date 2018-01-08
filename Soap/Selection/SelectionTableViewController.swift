@@ -104,6 +104,8 @@ class SelectionTableViewController: UITableViewController {
                 for: indexPath
             ) as! TitleTableViewCell
             
+            cell.isUserInteractionEnabled = false
+            
             return cell
             
         case .selection:
@@ -112,6 +114,8 @@ class SelectionTableViewController: UITableViewController {
                 withIdentifier: "SelectionTableViewCell",
                 for: indexPath
             ) as! SelectionTableViewCell
+            
+            cell.isUserInteractionEnabled = true
             
             return cell
             
@@ -137,6 +141,24 @@ class SelectionTableViewController: UITableViewController {
         }
         
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        let component = components[indexPath.section]
+//
+//        switch component {
+//
+//        case .title:
+//
+//            tableView.isUserInteractionEnabled = true
+//
+//        case .selection:
+//
+//            tableView.isUserInteractionEnabled = false
+//
+//        }
+//
+//    }
     
 
     /*
