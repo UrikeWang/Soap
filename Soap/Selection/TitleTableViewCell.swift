@@ -9,10 +9,22 @@
 import UIKit
 
 class TitleTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    private func setupTitleLabel() {
+        
+        let label = titleLabel!
+        
+        label.text = "請選擇您的需求"
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupTitleLabel()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
